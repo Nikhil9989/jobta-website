@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="100" viewBox="0 0 300 100">
+  <style>
+    .logo-text { font-family: Arial, sans-serif; font-weight: bold; }
+    .tagline { font-family: Arial, sans-serif; font-size: 12px; letter-spacing: 2px; }
+  </style>
+  
+  <!-- JOBTA text -->
+  <g fill="#000000">
+    <!-- J -->
+    <path d="M50,20 C58,20 65,22 65,30 L65,50 C65,65 55,70 45,70 C35,70 30,65 30,55 L40,55 C40,60 42,62 45,62 C48,62 55,62 55,50 L55,30 L40,30 L40,20 L50,20 Z" />
+    
+    <!-- O -->
+    <path d="M95,20 C110,20 120,30 120,45 C120,60 110,70 95,70 C80,70 70,60 70,45 C70,30 80,20 95,20 Z M95,30 C85,30 80,36 80,45 C80,54 85,60 95,60 C105,60 110,54 110,45 C110,36 105,30 95,30 Z" />
+    
+    <!-- B -->
+    <path d="M145,20 L160,20 C170,20 180,25 180,35 C180,40 177,45 170,47 C175,49 180,53 180,60 C180,67 170,70 160,70 L145,70 L145,20 Z M155,30 L155,40 L160,40 C165,40 170,38 170,35 C170,32 165,30 160,30 L155,30 Z M155,50 L155,60 L160,60 C165,60 170,58 170,55 C170,52 165,50 160,50 L155,50 Z" />
+    
+    <!-- T -->
+    <path d="M200,20 L240,20 L240,30 L225,30 L225,70 L215,70 L215,30 L200,30 L200,20 Z" />
+    
+    <!-- A -->
+    <path d="M270,20 L290,70 L280,70 L275,60 L255,60 L250,70 L240,70 L260,20 L270,20 Z M260,35 L258,50 L272,50 L270,35 L260,35 Z" />
+  </g>
+  
+  <!-- Tagline -->
+  <text x="150" y="85" class="tagline" text-anchor="middle" fill="#000000">JOURNEY OF BUILDING TALENT & ASPIRATIONS</text>
+</svg>
