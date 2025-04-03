@@ -1,4 +1,4 @@
-/* Enhanced Services section */
+/* Enhanced Services section with vibrant colors and card effects */
 .services {
     padding: var(--section-padding);
     position: relative;
@@ -12,7 +12,7 @@
     right: 0;
     width: 200px;
     height: 200px;
-    background: radial-gradient(circle, rgba(138, 143, 153, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(79, 134, 198, 0.15) 0%, transparent 70%);
     z-index: 0;
 }
 
@@ -36,6 +36,7 @@
     overflow: hidden;
 }
 
+/* Add subtle glow effect on hover */
 .service-card:before {
     content: '';
     position: absolute;
@@ -43,21 +44,22 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(225deg, transparent, rgba(255, 255, 255, 0.03));
+    background: linear-gradient(225deg, transparent, rgba(79, 134, 198, 0.05));
     z-index: -1;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: var(--shadow-md);
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+    box-shadow: 0 15px 30px rgba(79, 134, 198, 0.2);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.12));
+    border-color: rgba(79, 134, 198, 0.2);
 }
 
 .service-icon {
-    font-size: 40px;
+    font-size: 36px;
     margin-bottom: 20px;
-    color: var(--accent-blue);
-    background: rgba(255, 255, 255, 0.05);
+    color: var(--accent-color);
+    background: rgba(79, 134, 198, 0.1);
     width: 80px;
     height: 80px;
     display: flex;
@@ -67,11 +69,38 @@
     margin: 0 auto 25px;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
+    position: relative;
+    z-index: 1;
+}
+
+/* Add subtle glow effect to service icons */
+.service-icon:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-gold));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.service-card:hover .service-icon:before {
+    opacity: 1;
 }
 
 .service-card:hover .service-icon {
     transform: rotateY(360deg);
     color: var(--accent-gold);
+    background: rgba(79, 134, 198, 0.15);
+    box-shadow: 0 0 15px rgba(79, 134, 198, 0.3);
 }
 
 .service-title {
@@ -89,7 +118,7 @@
     transform: translateX(-50%);
     width: 40px;
     height: 2px;
-    background: linear-gradient(90deg, var(--accent-blue), var(--accent-color));
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-gold));
     border-radius: 1px;
 }
 
@@ -100,19 +129,38 @@
     line-height: 1.7;
 }
 
-/* Enhanced For Employers section */
+/* Enhanced For Employers section with improved visuals */
 .employers {
     padding: var(--section-padding);
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: rgba(45, 49, 66, 0.6);
     position: relative;
+    overflow: hidden;
 }
 
+/* Add diagonal stripe pattern */
 .employers:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(79, 134, 198, 0.03) 0,
+        rgba(79, 134, 198, 0.03) 1px,
+        transparent 1px,
+        transparent 20px
+    );
+    z-index: 0;
+}
+
+.employers:after {
     content: '';
     position: absolute;
     width: 200px;
     height: 200px;
-    background: radial-gradient(circle, rgba(93, 138, 168, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(79, 134, 198, 0.15) 0%, transparent 70%);
     bottom: 50px;
     left: 50px;
     border-radius: var(--border-radius-circle);
@@ -132,6 +180,7 @@
     position: relative;
     border-radius: var(--border-radius-lg);
     overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .employers-image:after {
@@ -141,16 +190,35 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(71, 77, 87, 0.7), transparent);
+    background: linear-gradient(to top, rgba(45, 49, 66, 0.8), transparent);
     z-index: 1;
+}
+
+/* Add colored border with gradient */
+.employers-image:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-gold));
+    z-index: -1;
+    border-radius: calc(var(--border-radius-lg) + 3px);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.employers-image:hover:before {
+    opacity: 1;
 }
 
 .employers-image img {
     width: 100%;
     border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-lg);
     transition: var(--transition);
     transform: scale(1.01);
+    filter: brightness(1.1) contrast(1.1);
 }
 
 .employers-image:hover img {
@@ -165,25 +233,61 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 25px;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.05));
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.07));
     padding: 20px;
     border-radius: var(--border-radius-md);
     border: 1px solid rgba(255, 255, 255, 0.03);
     transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add subtle shine effect on hover */
+.benefit-item:after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.benefit-item:hover:after {
+    opacity: 1;
+    animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+    0% {
+        transform: rotate(30deg) translateX(-200%);
+    }
+    100% {
+        transform: rotate(30deg) translateX(200%);
+    }
 }
 
 .benefit-item:hover {
     transform: translateX(5px);
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.07));
-    border-left: 3px solid var(--accent-blue);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.09));
+    border-left: 3px solid var(--accent-color);
+    box-shadow: 0 5px 15px rgba(79, 134, 198, 0.1);
 }
 
 .benefit-icon {
     flex-shrink: 0;
     font-size: 24px;
     margin-right: 15px;
-    color: var(--accent-blue);
-    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent-color);
+    background: rgba(79, 134, 198, 0.1);
     width: 50px;
     height: 50px;
     display: flex;
@@ -191,11 +295,13 @@
     justify-content: center;
     border-radius: var(--border-radius-circle);
     transition: var(--transition);
+    position: relative;
 }
 
 .benefit-item:hover .benefit-icon {
-    background: var(--accent-blue);
+    background: var(--accent-color);
     color: var(--white);
+    box-shadow: 0 0 15px rgba(79, 134, 198, 0.3);
 }
 
 .benefit-text h4 {
@@ -211,11 +317,23 @@
     line-height: 1.7;
 }
 
-/* Enhanced For Job Seekers section */
+/* Enhanced For Job Seekers section with improved visuals */
 .job-seekers {
     padding: var(--section-padding);
     position: relative;
     overflow: hidden;
+}
+
+/* Add abstract shape background */
+.job-seekers:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle at top right, rgba(236, 189, 59, 0.05), transparent 70%);
+    z-index: 0;
 }
 
 .job-seekers:after {
@@ -225,7 +343,7 @@
     right: 50px;
     width: 200px;
     height: 200px;
-    background: radial-gradient(circle, rgba(93, 138, 168, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(236, 189, 59, 0.1) 0%, transparent 70%);
     border-radius: var(--border-radius-circle);
     z-index: 0;
 }
@@ -248,6 +366,7 @@
     position: relative;
     border-radius: var(--border-radius-lg);
     overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .job-seekers-image:after {
@@ -257,16 +376,35 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(71, 77, 87, 0.7), transparent);
+    background: linear-gradient(to top, rgba(45, 49, 66, 0.8), transparent);
     z-index: 1;
+}
+
+/* Add colored border with gradient */
+.job-seekers-image:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-color));
+    z-index: -1;
+    border-radius: calc(var(--border-radius-lg) + 3px);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.job-seekers-image:hover:before {
+    opacity: 1;
 }
 
 .job-seekers-image img {
     width: 100%;
     border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-lg);
     transition: var(--transition);
     transform: scale(1.01);
+    filter: brightness(1.1) contrast(1.1);
 }
 
 .job-seekers-image:hover img {
@@ -282,19 +420,45 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 25px;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.05));
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.07));
     padding: 20px;
     border-radius: var(--border-radius-md);
     border: 1px solid rgba(255, 255, 255, 0.03);
     transition: var(--transition);
     position: relative;
     counter-increment: step-counter;
+    overflow: hidden;
+}
+
+/* Add subtle shine effect on hover */
+.step-item:after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.step-item:hover:after {
+    opacity: 1;
+    animation: shine 1.5s infinite;
 }
 
 .step-item:hover {
     transform: translateX(5px);
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.07));
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.09));
     border-left: 3px solid var(--accent-gold);
+    box-shadow: 0 5px 15px rgba(236, 189, 59, 0.1);
 }
 
 .step-number {
@@ -302,7 +466,7 @@
     width: 40px;
     height: 40px;
     border-radius: var(--border-radius-circle);
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-blue));
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-color));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -315,8 +479,9 @@
 }
 
 .step-item:hover .step-number {
-    background: linear-gradient(135deg, var(--accent-gold), var(--accent-color));
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-gold));
     transform: rotate(360deg);
+    box-shadow: 0 0 15px rgba(236, 189, 59, 0.3);
 }
 
 .step-text h4 {
