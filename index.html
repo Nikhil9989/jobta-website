@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/styles-part2.css">
     <link rel="stylesheet" href="css/styles-part3.css">
+    <link rel="stylesheet" href="css/blog-styles.css">
+    <link rel="stylesheet" href="css/modal-styles.css">
 </head>
 <body>
     <!-- Header -->
@@ -36,6 +38,7 @@
                     <li class="nav-item"><a href="#employers" class="nav-link">For Employers</a></li>
                     <li class="nav-item"><a href="#job-seekers" class="nav-link">For Job Seekers</a></li>
                     <li class="nav-item"><a href="#job-board" class="nav-link">Job Board</a></li>
+                    <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
                 
@@ -63,360 +66,23 @@
         </a>
     </section>
     
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Us</h2>
-            <p class="section-subtitle">Get to know who we are and what we do</p>
-            
-            <div class="about-content">
-                <div class="about-image fade-in-left">
-                    <img src="images/about-img.jpg" alt="About JOBTA">
-                </div>
-                <div class="about-text fade-in-right">
-                    <h3>We're More Than Just Recruiters</h3>
-                    <p>JOBTA is a premier talent acquisition and consulting firm dedicated to bridging the gap between exceptional talent and forward-thinking companies. With our deep industry expertise and innovative approach, we've been transforming how businesses build their teams.</p>
-                    <p>Our mission is to create meaningful connections that drive growth and success for both job seekers and employers. We believe in the power of the right match - the right person in the right role creates limitless possibilities.</p>
-                    
-                    <div class="stats">
-                        <div class="stat-item">
-                            <div class="stat-number">500+</div>
-                            <div class="stat-label">Placements</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">95%</div>
-                            <div class="stat-label">Retention Rate</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">10+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Load all sections via JavaScript -->
+    <div id="about-section"></div>
+    <div id="services-section"></div>
+    <div id="employers-section"></div>
+    <div id="job-seekers-section"></div>
+    <div id="job-board-section"></div>
+    <div id="blog-section"></div>
+    <div id="contact-section"></div>
+    <div id="footer-section"></div>
     
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Comprehensive talent solutions tailored to your needs</p>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="service-title">Permanent Recruitment</h3>
-                    <p class="service-description">We identify and secure top-tier talent for permanent roles across various industries and functions, ensuring the perfect match for your organization's needs and culture.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3 class="service-title">Contract Staffing</h3>
-                    <p class="service-description">Our flexible contract staffing solutions help you address short-term needs, special projects, or seasonal demands with qualified professionals ready to make an immediate impact.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3 class="service-title">Executive Search</h3>
-                    <p class="service-description">Our executive search services identify visionary leaders who can drive your organization forward, with a thorough assessment process that evaluates both technical skills and cultural alignment.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3 class="service-title">HR Consulting</h3>
-                    <p class="service-description">Our strategic HR consulting helps optimize your talent acquisition processes, retention strategies, and employer branding to create a sustainable competitive advantage.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="service-title">Talent Development</h3>
-                    <p class="service-description">We offer comprehensive talent development programs that help your employees grow, adapt to changing business needs, and reach their full potential within your organization.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3 class="service-title">Career Coaching</h3>
-                    <p class="service-description">Our expert career coaching services help job seekers identify their strengths, improve their interview skills, and create compelling personal brands to stand out in the job market.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- For Employers Section -->
-    <section id="employers" class="employers">
-        <div class="container">
-            <h2 class="section-title">For Employers</h2>
-            <p class="section-subtitle">Building exceptional teams that drive business success</p>
-            
-            <div class="employers-content">
-                <div class="employers-text fade-in-left">
-                    <h3>Find Your Next Star Performer</h3>
-                    <p>At JOBTA, we understand that your people are your greatest asset. Our tailored recruitment solutions help you attract, secure, and retain the talent your business needs to thrive in today's competitive landscape.</p>
-                    <p>We take the time to understand your business, culture, and specific requirements, ensuring we present only the most qualified and aligned candidates for your consideration.</p>
-                    
-                    <div class="employers-benefits">
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="benefit-text">
-                                <h4>Access to Top Talent</h4>
-                                <p>Our extensive network and proactive sourcing approach gives you access to high-quality candidates, including those not actively searching.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="benefit-text">
-                                <h4>Time and Cost Efficiency</h4>
-                                <p>We streamline the recruitment process, reducing your time-to-hire and the costs associated with prolonged vacancies and mis-hires.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="benefit-text">
-                                <h4>Cultural Alignment</h4>
-                                <p>Beyond skills and experience, we ensure candidates align with your company culture and values for long-term success.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="benefit-text">
-                                <h4>Ongoing Support</h4>
-                                <p>Our relationship doesn't end with placement. We provide ongoing support to ensure smooth onboarding and long-term retention.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="employers-image fade-in-right">
-                    <img src="images/employers-img.jpg" alt="Employers working with JOBTA">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- For Job Seekers Section -->
-    <section id="job-seekers" class="job-seekers">
-        <div class="container">
-            <h2 class="section-title">For Job Seekers</h2>
-            <p class="section-subtitle">Elevate your career with expert guidance and opportunities</p>
-            
-            <div class="job-seekers-content">
-                <div class="job-seekers-text fade-in-right">
-                    <h3>Discover Your Career Potential</h3>
-                    <p>Your career journey is unique, and at JOBTA, we're committed to helping you navigate it successfully. Whether you're taking your first step, looking for advancement, or considering a complete change, our expert recruiters are here to guide you.</p>
-                    <p>We go beyond simply matching skills to job descriptions. We take the time to understand your aspirations, values, and work style to connect you with opportunities where you'll truly thrive.</p>
-                    
-                    <div class="job-seekers-steps">
-                        <div class="step-item">
-                            <div class="step-number">1</div>
-                            <div class="step-text">
-                                <h4>Resume Submission</h4>
-                                <p>Submit your resume through our platform to join our talent network and be considered for current and future opportunities.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="step-item">
-                            <div class="step-number">2</div>
-                            <div class="step-text">
-                                <h4>Initial Consultation</h4>
-                                <p>Connect with a dedicated recruiter who will learn about your skills, experience, and career goals to find the right match.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="step-item">
-                            <div class="step-number">3</div>
-                            <div class="step-text">
-                                <h4>Opportunity Matching</h4>
-                                <p>Receive curated job opportunities that align with your skills, experience, and career aspirations.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="step-item">
-                            <div class="step-number">4</div>
-                            <div class="step-text">
-                                <h4>Interview Preparation</h4>
-                                <p>Get comprehensive support throughout the interview process, including preparation, feedback, and negotiation assistance.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="job-seekers-image fade-in-left">
-                    <img src="images/job-seekers-img.jpg" alt="Job seekers with JOBTA">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Job Board section -->
-    <section id="job-board" class="job-board">
-        <div class="container">
-            <h2 class="section-title">Job Board</h2>
-            <p class="section-subtitle">Explore our latest opportunities across industries</p>
-            
-            <div class="job-search">
-                <input type="text" placeholder="Job title, keywords, or company">
-                <input type="text" placeholder="Location">
-                <button type="button">Search</button>
-            </div>
-            
-            <div class="job-board-placeholder">
-                <i class="fas fa-briefcase"></i>
-                <h3>Job Board Coming Soon</h3>
-                <p>Our comprehensive job board is under development and will be available in the next phase. Connect with us directly to learn about current opportunities.</p>
-                <a href="#contact" class="btn btn-primary">Contact Us</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <p class="section-subtitle">Reach out to discuss how we can help with your talent needs</p>
-            
-            <div class="contact-content">
-                <div class="contact-info fade-in-left">
-                    <h3>Get In Touch</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Our Location</h4>
-                            <p>123 Business Avenue, Suite 500<br>New York, NY 10001</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Phone Number</h4>
-                            <p><a href="tel:+12125551234">(212) 555-1234</a></p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Email Address</h4>
-                            <p><a href="mailto:info@jobta.com">info@jobta.com</a></p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Business Hours</h4>
-                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday & Sunday: Closed</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <form class="contact-form fade-in-right">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="form-submit">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <img src="images/jobta_logo.svg" alt="JOBTA Logo">
-                    </div>
-                    <p class="footer-description">JOBTA is a premier talent acquisition and consulting firm dedicated to connecting exceptional talent with forward-thinking companies.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h4 class="footer-title">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#job-board">Job Board</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4 class="footer-title">For Employers</h4>
-                    <ul class="footer-links">
-                        <li><a href="#employers">Our Approach</a></li>
-                        <li><a href="#services">Recruitment Services</a></li>
-                        <li><a href="#services">HR Consulting</a></li>
-                        <li><a href="#contact">Request a Consultation</a></li>
-                        <li><a href="#job-board">Post a Job (Coming Soon)</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4 class="footer-title">For Job Seekers</h4>
-                    <ul class="footer-links">
-                        <li><a href="#job-seekers">Our Process</a></li>
-                        <li><a href="#services">Career Coaching</a></li>
-                        <li><a href="#job-board">Browse Jobs (Coming Soon)</a></li>
-                        <li><a href="#contact">Submit Resume</a></li>
-                        <li><a href="#contact">Get in Touch</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 JOBTA. All Rights Reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-            </div>
-        </div>
-    </footer>
-    
+    <!-- Modals -->
+    <div id="modals-container"></div>
+
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script src="js/sections-loader.js"></script>
+    <script src="js/blog-filter.js"></script>
+    <script src="js/modal-handlers.js"></script>
 </body>
 </html>
