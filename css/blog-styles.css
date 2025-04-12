@@ -1,8 +1,14 @@
 /* Blog Section Styles */
 
 .blog {
-    background-color: #f8f9fa;
+    background: linear-gradient(to bottom, #474D57, #5A5F69);
     padding: 100px 0;
+    color: #ffffff;
+}
+
+.blog .section-title,
+.blog .section-subtitle {
+    color: #ffffff;
 }
 
 .blog-filter {
@@ -13,13 +19,13 @@
 }
 
 .filter-btn {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.1);
     border: none;
     padding: 10px 20px;
     margin: 0 5px 10px;
     font-size: 16px;
     font-weight: 500;
-    color: #474D57;
+    color: #ffffff;
     cursor: pointer;
     border-radius: 30px;
     transition: all 0.3s ease;
@@ -28,6 +34,7 @@
 .filter-btn:hover, .filter-btn.active {
     background-color: #5D8AA8;
     color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .blog-grid {
@@ -38,16 +45,17 @@
 }
 
 .blog-card {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.95);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #333;
 }
 
 .blog-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 .blog-image {
@@ -77,10 +85,12 @@
     border-radius: 30px;
     font-size: 12px;
     font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .blog-content {
     padding: 25px;
+    background-color: #ffffff;
 }
 
 .blog-title {
@@ -88,7 +98,7 @@
     font-weight: 700;
     margin-bottom: 15px;
     line-height: 1.4;
-    color: #333;
+    color: #474D57;
 }
 
 .blog-meta {
@@ -153,17 +163,18 @@
     height: 40px;
     margin: 0 5px;
     border-radius: 50%;
-    background-color: #ffffff;
-    color: #474D57;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
     text-decoration: none;
     font-weight: 500;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
 .pagination-item:hover, .pagination-item.active {
     background-color: #5D8AA8;
     color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .pagination-item.next {
@@ -172,7 +183,22 @@
 }
 
 .pagination-item.next:hover {
-    background-color: #474D57;
+    background-color: #4A7994;
+    transform: scale(1.05);
+}
+
+/* Adding subtle metallic accent as suggested in the design */
+.blog-card {
+    border: 1px solid rgba(138, 143, 153, 0.2); /* Light steel blue (#8A8F99) with low opacity */
+}
+
+.blog-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to right, #5D8AA8, #8A8F99);
+    margin-top: 10px;
 }
 
 /* Responsive Adjustments */
